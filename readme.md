@@ -52,7 +52,10 @@ Open a web browser and navigate to [http://localhost:8000](http://localhost:8000
 The application provides several endpoints to interact with the banning system:
 
 - **`/validate_email`**: Validate an email address to check if it is disposable or not.  
-  - **Example**: [http://localhost:8000/validate_email?email=test@marketing.com](http://localhost:8000/validate_email?email=test@marketing.com)
+  - **Example (Invalid email - Bad DNS)**: [http://localhost:8000/validate_email?email=hello@5ejulyefcfer.org](http://localhost:8000/validate_email?email=hello@5ejulyefcfer.org)  
+  - **Example (Disposable email)**: [http://localhost:8000/validate_email?email=hello@4warding.com](http://localhost:8000/validate_email?email=hello@4warding.com)
+  - **Example (Valid email)**: [localhost:8000/validate_email?email=hello@hotmail.com](localhost:8000/validate_email?email=hello@hotmail.com)
+  
 
 - **`/validate_ip`**: Validate an IP address to check if it is blocked or not.  
   - **Example**: [http://localhost:8000/validate_ip?ip=84.239.49.177](http://localhost:8000/validate_ip?ip=84.239.49.177)

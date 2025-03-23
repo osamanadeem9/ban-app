@@ -10,8 +10,9 @@ def validate_email():
     print(email)
     
     analyzer = EmailAnalyzer()
-    if not analyzer.is_valid(email):
-        return f"Email: {email} \n This is an invalid email"
-    else:
-        return f"Email: {email} \n This is a valid email"
+    is_valid = analyzer.is_valid(email, first_check=True)
     
+    return {
+        "email": email,
+        "is_valid": is_valid
+    }
